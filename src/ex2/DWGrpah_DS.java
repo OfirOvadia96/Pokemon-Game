@@ -1,147 +1,164 @@
 package ex2;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+
+
+
+
 
 public class DWGrpah_DS implements directed_weighted_graph {
+private HashMap<Integer,node_data>nodes;
 
-	
+// Src -> Dest -> edge_data
+private HashMap<Integer,HashMap<Integer,edge_data>>edges;
 
-	public class NodeData implements node_data { //*****Node class
-		
-		private int key;
-		private String info;
-		private double weight;
-		private int tag;
-		
-		public NodeData() { //constructor
-		this.key = Integer.MIN_VALUE;
-		this.info = "white";
-		this.weight = 0;
-		this.tag = 0;
-		}
-		
-		public NodeData(NodeData copy) { //copy constructor
-			this.key = copy.key;
-			this.info = copy.info;
-			this.weight = copy.weight;
-			this.tag = copy.tag;
-		}
-		@Override
-		public int getKey() {
-			return this.key;
-		}
+// Dest -> Src -> edge_data
+private HashMap<Integer,HashMap<Integer,edge_data>>destEdges;
 
-		@Override
-		public geo_location getLocation() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+private int edgesSize = 0;
+private int mcSize = 0;
 
-		@Override
-		public void setLocation(geo_location p) {
-			// TODO Auto-generated method stub
-			
-		}
 
-		@Override
-		public double getWeight() {
-			return this.weight;
-		}
-
-		@Override
-		public void setWeight(double w) {
-			this.weight = w;
-			
-		}
-
-		@Override
-		public String getInfo() {
-			return this.info;
-		}
-
-		@Override
-		public void setInfo(String s) {
-			this.info = s;
-		}
-
-		@Override
-		public int getTag() {
-			return this.tag;
-		}
-
-		@Override
-		public void setTag(int t) {
-			this.tag = t;
-			
-		}
+	public  DWGrpah_DS() {
+		nodes=new HashMap<Integer,node_data>();
+		edges=new HashMap<Integer,HashMap<Integer,edge_data>>();
 	}
-	//******************end Node*****************
+	public  DWGrpah_DS(directed_weighted_graph graph) {
+		nodes=new HashMap<Integer,node_data>();
+		edges=new HashMap<Integer,HashMap<Integer,edge_data>>();
+		for(node_data node : graph.getV()) {
+			node_data newNode = new NodeData(node);
+			addNode(newNode);
+		}
+	for(node_data node : graph.getV()) {
+			
+			// run over all neighbors of specific node
+			for(edge_data neighbor : graph.getE(node.getKey())) {
+				
+				//create neighbor
+				double weight = neighbor.getWeight(); 
+				
+				// add neighbor
+				connect(neighbor.getSrc(), neighbor.getDest(), weight);
+			}
+		}
+		
+		this.edgesSize = graph.edgeSize();
+		this.mcSize = graph.getMC();
+		
 	
+	}
+	
+	private boolean hasEdges (int src, int dest) 
+	 {
+		HashMap<Integer, edge_data> neighbors = edges.get(src);
+		if(neighbors.containsKey(dest)) {
+			return true;
+		}
+		return false;
+	}
 	
 	@Override
 	public node_data getNode(int key) {
 		// TODO Auto-generated method stub
-		return null;
+		return nodes.get(key);
 	}
 
 	@Override
 	public edge_data getEdge(int src, int dest) {
-		// TODO Auto-generated method stub
-		return null;
+		if (! edges.containsKey(src)) return null;
+		HashMap<Integer, edge_data> neighbors = edges.get(src);
+		if(neighbors.containsKey(dest)) return null;
+		return neighbors.get(dest);
+	
 	}
 
 	@Override
 	public void addNode(node_data n) {
-		// TODO Auto-generated method stub
-		
+		if(!nodes.containsKey(n.getKey())) {
+			nodes.put(n.getKey(),new NodeData( n));
+			HashMap<Integer, edge_data> neighborsSrc = new HashMap<Integer, edge_data>();
+			HashMap<Integer, edge_data> neighborsDest = new HashMap<Integer, edge_data>();
+
+			edges.put(n.getKey(),  neighborsSrc );
+			destEdges.put(n.getKey(),  neighborsDest );
+	          mcSize++;
+		}
 	}
 
 	@Override
 	public void connect(int src, int dest, double w) {
-		// TODO Auto-generated method stub
 		
+		HashMap<Integer, edge_data> neighborsSrc = edges.get(src);
+		HashMap<Integer, edge_data> neighborsDest = destEdges.get(dest);
+
+		
+		if(hasEdges(src,dest)) {
+			neighborsSrc.put(dest, new EdgeData(src,dest,w));
+			neighborsDest.put(src, new EdgeData(src,dest,w));
+		}
+	
 	}
 
 	@Override
 	public Collection<node_data> getV() {
-		// TODO Auto-generated method stub
-		return null;
+		return nodes.values();
 	}
 
 	@Override
 	public Collection<edge_data> getE(int node_id) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		return edges.get(node_id).values();
 
+	}
+	
+
+	private Collection<edge_data> getDestE(int destKey) {
+		// TODO Auto-generated method stub
+		return destEdges.get(destKey).values();
+	}
+	
 	@Override
 	public node_data removeNode(int key) {
-		// TODO Auto-generated method stub
-		return null;
+		if(!nodes.containsKey(key))return null;
+		for(edge_data node:getE(key)) {
+			removeEdge(node.getSrc(),node.getDest());
+		}
+		
+		for(edge_data node:getDestE(key)) {
+			removeEdge(node.getSrc(),node.getDest());
+		}
+		
+		mcSize++;
+		return nodes.remove(key);
 	}
 
 	@Override
 	public edge_data removeEdge(int src, int dest) {
-		// TODO Auto-generated method stub
-		return null;
+		if(!hasEdges(src, dest))return null;
+	
+		destEdges.get(dest).remove(src);
+		return 	edges.get(src).remove(dest);
 	}
 
 	@Override
 	public int nodeSize() {
 		// TODO Auto-generated method stub
-		return 0;
+		return nodes.size();
 	}
 
 	@Override
 	public int edgeSize() {
 		// TODO Auto-generated method stub
-		return 0;
+		return edgesSize;
 	}
 
 	@Override
 	public int getMC() {
 		// TODO Auto-generated method stub
-		return 0;
+		return mcSize;
 	}
 
 }
