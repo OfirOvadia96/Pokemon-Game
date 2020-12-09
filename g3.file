@@ -1,0 +1,580 @@
+{
+  "nodes": {
+    "0": {
+      "key": 0,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "1": {
+      "key": 1,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "2": {
+      "key": 2,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "3": {
+      "key": 3,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "4": {
+      "key": 4,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "5": {
+      "key": 5,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "6": {
+      "key": 6,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "7": {
+      "key": 7,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "8": {
+      "key": 8,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "9": {
+      "key": 9,
+      "info": "white",
+      "weight": 0.0,
+      "tag": 0,
+      "location": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  },
+  "edges": {
+    "0": {
+      "4": {
+        "src": 0,
+        "dest": 4,
+        "weight": 0.8624497547615505,
+        "info": "white",
+        "tag": 0
+      },
+      "5": {
+        "src": 0,
+        "dest": 5,
+        "weight": 0.07302602021384397,
+        "info": "white",
+        "tag": 0
+      },
+      "6": {
+        "src": 0,
+        "dest": 6,
+        "weight": 0.280001615782666,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "1": {
+      "6": {
+        "src": 1,
+        "dest": 6,
+        "weight": 0.008760417318731673,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "2": {
+      "4": {
+        "src": 2,
+        "dest": 4,
+        "weight": 0.2331557947513334,
+        "info": "white",
+        "tag": 0
+      },
+      "5": {
+        "src": 2,
+        "dest": 5,
+        "weight": 0.11596708803265776,
+        "info": "white",
+        "tag": 0
+      },
+      "7": {
+        "src": 2,
+        "dest": 7,
+        "weight": 0.8867444223713158,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "3": {
+      "0": {
+        "src": 3,
+        "dest": 0,
+        "weight": 0.45100850261544956,
+        "info": "white",
+        "tag": 0
+      },
+      "1": {
+        "src": 3,
+        "dest": 1,
+        "weight": 0.6949479796024919,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 3,
+        "dest": 9,
+        "weight": 0.006117182265761301,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "4": {
+      "0": {
+        "src": 4,
+        "dest": 0,
+        "weight": 0.6171458898614318,
+        "info": "white",
+        "tag": 0
+      },
+      "3": {
+        "src": 4,
+        "dest": 3,
+        "weight": 0.7173224016222269,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 4,
+        "dest": 9,
+        "weight": 0.061901802278626294,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "5": {
+      "2": {
+        "src": 5,
+        "dest": 2,
+        "weight": 0.8764426533244832,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 5,
+        "dest": 9,
+        "weight": 0.6304048639228539,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "6": {
+      "1": {
+        "src": 6,
+        "dest": 1,
+        "weight": 0.6524767068959532,
+        "info": "white",
+        "tag": 0
+      },
+      "2": {
+        "src": 6,
+        "dest": 2,
+        "weight": 0.8803572849070423,
+        "info": "white",
+        "tag": 0
+      },
+      "8": {
+        "src": 6,
+        "dest": 8,
+        "weight": 0.3538232827704746,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "7": {
+      "1": {
+        "src": 7,
+        "dest": 1,
+        "weight": 0.481728301575598,
+        "info": "white",
+        "tag": 0
+      },
+      "3": {
+        "src": 7,
+        "dest": 3,
+        "weight": 0.6073350789607563,
+        "info": "white",
+        "tag": 0
+      },
+      "4": {
+        "src": 7,
+        "dest": 4,
+        "weight": 0.37580820874305876,
+        "info": "white",
+        "tag": 0
+      },
+      "6": {
+        "src": 7,
+        "dest": 6,
+        "weight": 0.20463555220568552,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "8": {
+      "0": {
+        "src": 8,
+        "dest": 0,
+        "weight": 0.5923792438629387,
+        "info": "white",
+        "tag": 0
+      },
+      "1": {
+        "src": 8,
+        "dest": 1,
+        "weight": 0.6169513867462899,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "9": {
+      "0": {
+        "src": 9,
+        "dest": 0,
+        "weight": 0.7638204881746642,
+        "info": "white",
+        "tag": 0
+      },
+      "1": {
+        "src": 9,
+        "dest": 1,
+        "weight": 0.7105747751483344,
+        "info": "white",
+        "tag": 0
+      },
+      "2": {
+        "src": 9,
+        "dest": 2,
+        "weight": 0.2484887670873126,
+        "info": "white",
+        "tag": 0
+      },
+      "3": {
+        "src": 9,
+        "dest": 3,
+        "weight": 0.34751802920311026,
+        "info": "white",
+        "tag": 0
+      },
+      "5": {
+        "src": 9,
+        "dest": 5,
+        "weight": 0.4914512055616126,
+        "info": "white",
+        "tag": 0
+      },
+      "8": {
+        "src": 9,
+        "dest": 8,
+        "weight": 0.8363149477563286,
+        "info": "white",
+        "tag": 0
+      }
+    }
+  },
+  "destEdges": {
+    "0": {
+      "3": {
+        "src": 3,
+        "dest": 0,
+        "weight": 0.45100850261544956,
+        "info": "white",
+        "tag": 0
+      },
+      "4": {
+        "src": 4,
+        "dest": 0,
+        "weight": 0.6171458898614318,
+        "info": "white",
+        "tag": 0
+      },
+      "8": {
+        "src": 8,
+        "dest": 0,
+        "weight": 0.5923792438629387,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 0,
+        "weight": 0.7638204881746642,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "1": {
+      "3": {
+        "src": 3,
+        "dest": 1,
+        "weight": 0.6949479796024919,
+        "info": "white",
+        "tag": 0
+      },
+      "6": {
+        "src": 6,
+        "dest": 1,
+        "weight": 0.6524767068959532,
+        "info": "white",
+        "tag": 0
+      },
+      "7": {
+        "src": 7,
+        "dest": 1,
+        "weight": 0.481728301575598,
+        "info": "white",
+        "tag": 0
+      },
+      "8": {
+        "src": 8,
+        "dest": 1,
+        "weight": 0.6169513867462899,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 1,
+        "weight": 0.7105747751483344,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "2": {
+      "5": {
+        "src": 5,
+        "dest": 2,
+        "weight": 0.8764426533244832,
+        "info": "white",
+        "tag": 0
+      },
+      "6": {
+        "src": 6,
+        "dest": 2,
+        "weight": 0.8803572849070423,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 2,
+        "weight": 0.2484887670873126,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "3": {
+      "4": {
+        "src": 4,
+        "dest": 3,
+        "weight": 0.7173224016222269,
+        "info": "white",
+        "tag": 0
+      },
+      "7": {
+        "src": 7,
+        "dest": 3,
+        "weight": 0.6073350789607563,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 3,
+        "weight": 0.34751802920311026,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "4": {
+      "0": {
+        "src": 0,
+        "dest": 4,
+        "weight": 0.8624497547615505,
+        "info": "white",
+        "tag": 0
+      },
+      "2": {
+        "src": 2,
+        "dest": 4,
+        "weight": 0.2331557947513334,
+        "info": "white",
+        "tag": 0
+      },
+      "7": {
+        "src": 7,
+        "dest": 4,
+        "weight": 0.37580820874305876,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "5": {
+      "0": {
+        "src": 0,
+        "dest": 5,
+        "weight": 0.07302602021384397,
+        "info": "white",
+        "tag": 0
+      },
+      "2": {
+        "src": 2,
+        "dest": 5,
+        "weight": 0.11596708803265776,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 5,
+        "weight": 0.4914512055616126,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "6": {
+      "0": {
+        "src": 0,
+        "dest": 6,
+        "weight": 0.280001615782666,
+        "info": "white",
+        "tag": 0
+      },
+      "1": {
+        "src": 1,
+        "dest": 6,
+        "weight": 0.008760417318731673,
+        "info": "white",
+        "tag": 0
+      },
+      "7": {
+        "src": 7,
+        "dest": 6,
+        "weight": 0.20463555220568552,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "7": {
+      "2": {
+        "src": 2,
+        "dest": 7,
+        "weight": 0.8867444223713158,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "8": {
+      "6": {
+        "src": 6,
+        "dest": 8,
+        "weight": 0.3538232827704746,
+        "info": "white",
+        "tag": 0
+      },
+      "9": {
+        "src": 9,
+        "dest": 8,
+        "weight": 0.8363149477563286,
+        "info": "white",
+        "tag": 0
+      }
+    },
+    "9": {
+      "3": {
+        "src": 3,
+        "dest": 9,
+        "weight": 0.006117182265761301,
+        "info": "white",
+        "tag": 0
+      },
+      "4": {
+        "src": 4,
+        "dest": 9,
+        "weight": 0.061901802278626294,
+        "info": "white",
+        "tag": 0
+      },
+      "5": {
+        "src": 5,
+        "dest": 9,
+        "weight": 0.6304048639228539,
+        "info": "white",
+        "tag": 0
+      }
+    }
+  },
+  "edgesSize": 30,
+  "mcSize": 49
+}
