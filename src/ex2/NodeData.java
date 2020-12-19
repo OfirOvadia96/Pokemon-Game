@@ -30,7 +30,6 @@ public class NodeData implements node_data , Comparable<NodeData>{ //*****Node c
 
 	@Override
 	public geo_location getLocation() {
-		// TODO Auto-generated method stub
 		return location;
 	}
 

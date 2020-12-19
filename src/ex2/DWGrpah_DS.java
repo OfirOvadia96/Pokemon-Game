@@ -4,19 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-
-
-
-
 public class DWGrpah_DS implements directed_weighted_graph {
 private HashMap<Integer,node_data>nodes;
-
 // Src -> Dest -> edge_data
 private HashMap<Integer,HashMap<Integer,edge_data>>edges;
-
 // Dest -> Src -> edge_data
 private HashMap<Integer,HashMap<Integer,edge_data>>destEdges;
-
 private int edgesSize = 0;
 private int mcSize = 0;
 
@@ -44,15 +37,11 @@ private int mcSize = 0;
 				connect(neighbor.getSrc(), neighbor.getDest(), weight);
 			}
 		}
-		
 		this.edgesSize = graph.edgeSize();
 		this.mcSize = graph.getMC();
-		
-	
 	}
 	
-	private boolean hasEdges (int src, int dest) 
-	 {
+	private boolean hasEdges (int src, int dest) {
 		HashMap<Integer, edge_data> neighbors = edges.get(src);
 		if(neighbors.containsKey(dest)) {
 			return true;
@@ -62,7 +51,6 @@ private int mcSize = 0;
 	
 	@Override
 	public node_data getNode(int key) {
-		// TODO Auto-generated method stub
 		return nodes.get(key);
 	}
 
@@ -72,7 +60,6 @@ private int mcSize = 0;
 		HashMap<Integer, edge_data> neighbors = edges.get(src);
 		if(neighbors.containsKey(dest)) return null;
 		return neighbors.get(dest);
-	
 	}
 
 	@Override
@@ -89,17 +76,14 @@ private int mcSize = 0;
 	}
 
 	@Override
-	public void connect(int src, int dest, double w) {
-		
+	public void connect(int src, int dest, double w) {		
 		HashMap<Integer, edge_data> neighborsSrc = edges.get(src);
 		HashMap<Integer, edge_data> neighborsDest = destEdges.get(dest);
 
-		
 		if(hasEdges(src,dest)) {
 			neighborsSrc.put(dest, new EdgeData(src,dest,w));
 			neighborsDest.put(src, new EdgeData(src,dest,w));
 		}
-	
 	}
 
 	@Override
@@ -113,7 +97,6 @@ private int mcSize = 0;
 		return edges.get(node_id).values();
 
 	}
-	
 
 	private Collection<edge_data> getDestE(int destKey) {
 		// TODO Auto-generated method stub
@@ -145,20 +128,16 @@ private int mcSize = 0;
 
 	@Override
 	public int nodeSize() {
-		// TODO Auto-generated method stub
 		return nodes.size();
 	}
 
 	@Override
 	public int edgeSize() {
-		// TODO Auto-generated method stub
 		return edgesSize;
 	}
 
 	@Override
 	public int getMC() {
-		// TODO Auto-generated method stub
 		return mcSize;
 	}
-
 }

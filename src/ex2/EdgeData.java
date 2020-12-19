@@ -37,19 +37,16 @@ public class EdgeData implements edge_data {
 
 	@Override
 	public int getDest() {
-		// TODO Auto-generated method stub
 		return dest;
 	}
 
 	@Override
 	public double getWeight() {
-		// TODO Auto-generated method stub
 		return weight;
 	}
 
 	@Override
 	public String getInfo() {
-		// TODO Auto-generated method stub
 		return info;
 	}
 
