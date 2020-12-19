@@ -1,10 +1,12 @@
 package ex2;
 
-public class EdgeData implements edge_data {
+import java.io.Serializable;
+
+public class EdgeData implements edge_data, Serializable {
 	private int src;
 	private int dest;
 	private double weight;
-	private String info;
+	private String info = "white";
 	private int tag;
 
 
@@ -12,7 +14,7 @@ public class EdgeData implements edge_data {
 		src=0;
 		dest=0;
 		weight=0;
-		info=null;
+		info="white";
 		tag=0;
 	}
 	
@@ -64,5 +66,54 @@ public class EdgeData implements edge_data {
 	public void setTag(int t) {
 		tag=t;		
 	}
+
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + dest;
+		result = prime * result + ((info == null) ? 0 : info.hashCode());
+		result = prime * result + src;
+		result = prime * result + tag;
+		long temp;
+		temp = Double.doubleToLongBits(weight);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EdgeData other = (EdgeData) obj;
+		if (dest != other.dest)
+			return false;
+		if (info == null) {
+			if (other.info != null)
+				return false;
+		} else if (!info.equals(other.info))
+			return false;
+		if (src != other.src)
+			return false;
+		if (tag != other.tag)
+			return false;
+		if (Double.doubleToLongBits(weight) != Double.doubleToLongBits(other.weight))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "EdgeData [src=" + src + ", dest=" + dest + ", weight=" + weight + ", info=" + info + ", tag=" + tag
+				+ "]";
+	}
+	
+	
 
 }
