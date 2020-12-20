@@ -6,12 +6,12 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import ex2.DWGrpah_Algo;
-import ex2.DWGrpah_DS;
-import ex2.NodeData;
-import ex2.directed_weighted_graph;
-import ex2.dw_graph_algorithms;
-import ex2.node_data;
+import api.DWGrpah_Algo;
+import api.DWGrpah_DS;
+import api.NodeData;
+import api.directed_weighted_graph;
+import api.dw_graph_algorithms;
+import api.node_data;
 
 class DWGraph_AlgoTest {
 
@@ -71,6 +71,8 @@ class DWGraph_AlgoTest {
 	        assertNotEquals(g.edgeSize(),g2.edgeSize());
 	        assertNotEquals(g,g2);
 	    }
+	    
+	    
 	    @Test
 	    void isConnected() {
 
@@ -100,6 +102,7 @@ class DWGraph_AlgoTest {
 
 	        assertEquals(true, ga.isConnected());
 	    }
+	    
 	    
 	    @Test
 	    void shortestPathDist() {
@@ -135,6 +138,7 @@ class DWGraph_AlgoTest {
 	        double weights = mygraph.shortestPathDist(0,1);
 	        assertEquals(2,weights);
 	    }
+	    
 	    
 	    @Test
 	    void shortestPath() {
@@ -180,6 +184,7 @@ class DWGraph_AlgoTest {
 	        for(int i = 0; i < listB.size(); i++) assertEquals(pathB[i],listB.get(i).getKey());
 	    }
 	
+	    
 	    @Test
 	    void save_load() {
 	    	//save

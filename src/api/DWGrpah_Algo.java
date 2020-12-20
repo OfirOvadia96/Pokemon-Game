@@ -1,4 +1,4 @@
-package ex2;
+package api;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,7 +37,6 @@ public class DWGrpah_Algo implements dw_graph_algorithms, Serializable{
 
 
 			PriorityQueue<node_data> q = new PriorityQueue<>();
-			//src.setTag(0);
 			tags.put(src.getKey(),0.0);
 			q.add(src);
 
@@ -48,7 +47,6 @@ public class DWGrpah_Algo implements dw_graph_algorithms, Serializable{
 				
 				for (edge_data neighbor : neighbors) {
 					double w = neighbor.getWeight();
-					//System.out.println(neighbor);
 					if(neighbor.getInfo() == "white") {
 						double sourceWeight = tags.get(vertex.getKey()) + w;
 						double oldWeight = tags.get(neighbor.getDest());
@@ -102,7 +100,6 @@ public class DWGrpah_Algo implements dw_graph_algorithms, Serializable{
 		while (iterator.hasNext()) {
 			node_data node_info = iterator.next();
 			if(node_info.getInfo() != "black") {
-				System.out.println(node_info);
 				return false;
 			}
 		}
@@ -232,7 +229,6 @@ public class DWGrpah_Algo implements dw_graph_algorithms, Serializable{
 
 			FileReader reader = new FileReader(file);
 			DWGrpah_Algo algo = gson.fromJson(reader, DWGrpah_Algo.class);	
-			System.out.println(algo);
 		} 
 		catch (FileNotFoundException e) {
 			e.printStackTrace();

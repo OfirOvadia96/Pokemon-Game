@@ -1,4 +1,4 @@
-package ex2;
+package api;
 
 import java.io.Serializable;
 
@@ -6,6 +6,7 @@ public class GeoLocation implements geo_location,Serializable{
    private double x;
    private double y;
    private double z;
+   
    public	GeoLocation () {
 		this.x=0;
 		this.y=0;

@@ -10,11 +10,11 @@ import java.util.Random;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ex2.DWGrpah_DS;
-import ex2.NodeData;
-import ex2.directed_weighted_graph;
-import ex2.edge_data;
-import ex2.node_data;
+import api.DWGrpah_DS;
+import api.NodeData;
+import api.directed_weighted_graph;
+import api.edge_data;
+import api.node_data;
 
 
 

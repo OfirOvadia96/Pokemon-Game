@@ -1,4 +1,4 @@
-package ex2;
+package api;
 
 import java.io.Serializable;
 
@@ -17,6 +17,14 @@ public class NodeData implements node_data , Comparable<NodeData>, Serializable{
 	this.tag = 0;
 	this.location= new GeoLocation(0,0,0)  ;
 	}
+	
+	public NodeData(int key , geo_location geo) { //constructor
+		this.key = key;
+		this.info = "white";
+		this.weight = 0;
+		this.tag = 0;
+		this.location= geo;
+		}
 	
 	public NodeData(int key, String info, double weight, int tag, geo_location location) { //copy constructor
 		this.key = key;
