@@ -1,4 +1,4 @@
-<h1> Ex2-PokemonGame: </h1>
+<h1  align="center"> Ex2-PokemonGame: </h1>
 
 **A game played on an arena where the "Pokemon Catchers" agents try to catch as many Pokemon as possible by the end of the given time.
 Each player who enters the game enters his ID and the level at which he wants to play, then the game will run and the screen will show the points accumulated by the agents, and the remaining time.
